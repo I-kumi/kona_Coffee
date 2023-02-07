@@ -1,0 +1,112 @@
+.l-header__inner.js-headerHidden {
+  transition: 1s;
+  transform: translateY(-200%);
+}
+
+._scrollFadeIn {
+  opacity: 0;
+  visibility: hidden;
+  transition: 2s;
+}
+
+._isActiveFadeIn {
+  opacity: 1;
+  visibility: visible;
+}
+
+._scrollSlideUp {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+  transform: translateY(30%);
+}
+
+._isActiveSlideUp {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+._scrollSlideInLeft {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+  transform: translateX(-10%);
+}
+
+._isActiveSlideInLeft {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.p-about__textBox._isActiveSlideLeft {
+  transform: translateX(0);
+  opacity: 1;
+  transition-duration: 0.4s;
+  transition-delay: 0s;
+}
+
+._scrollBothListUp {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+  transform: translate(0, 1rem);
+}
+
+.js-linkSlideUp {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+._linkSlideLeft {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s;
+  transform: translateX(-10%);
+}
+
+.js-linkSlideLeft {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.l-header__navSp.js-active {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  color: #fff;
+  font-size: 3.7777vw;
+  transition: 0.1s;
+}
+
+.btn_close.js-btnIsActive {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  color: #242E43;
+}
+
+.btn_open.js-btnIsaHidden {
+  display: none;
+}
+
+.js-textHidden {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.js-imgBlur {
+  filter: blur(4px);
+}
+
+.p-hero__slickDots li.js-isActiveColor {
+  background-color: #EBE9E1;
+}
+
+.js-background {
+  background-color: #242e43;
+  border-bottom: 1px solid gainsboro;
+}/*# sourceMappingURL=js.css.map */

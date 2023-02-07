@@ -1,0 +1,129 @@
+
+//スクロールでヘッダー非表示
+.l-header__inner.js-headerHidden {
+    transition: 1s;
+    transform: translateY(-200%);
+}
+
+//スクロールで文字をフェードイン
+._scrollFadeIn {
+    opacity: 0;
+    visibility: hidden;
+    transition: 2s;
+}
+
+._isActiveFadeIn {
+    opacity: 1;
+    visibility: visible;
+}
+
+//スクロールで文字をスライドイン下から上
+._scrollSlideUp {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    transform: translateY(30%);
+}
+
+._isActiveSlideUp {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+//スクロールで文字をスライドイン左から右
+._scrollSlideInLeft {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.8s;
+    transform: translateX(-10%);
+}
+
+._isActiveSlideInLeft {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+//上下スクロール時に文字を左から右にスライド表示
+.p-about__textBox._isActiveSlideLeft {
+    transform: translateX(0);
+    opacity: 1;
+    transition-duration: .4s;
+    transition-delay: 0s;
+}
+
+
+//リストの時間差アニメーション
+//下から上
+._scrollBothListUp {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    transform: translate(0, 1rem);
+}
+
+.js-linkSlideUp {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+//左から右
+._linkSlideLeft {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+    transform: translateX(-10%);
+}
+
+.js-linkSlideLeft {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+
+//ナビゲーションメニューをクリックでモーダルの表示切り替え
+.l-header__navSp.js-active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    color: #fff;
+    font-size: 3.7777vw;
+    transition: 0.1s;
+}
+
+.btn_close.js-btnIsActive {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    color: #242E43;
+}
+
+.btn_open.js-btnIsaHidden {
+    display: none;
+}
+
+//一定の位置までスクロールしたら文字を隠す
+.js-textHidden {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+//
+.js-imgBlur {
+    filter: blur(4px);
+}
+
+//
+.p-hero__slickDots li.js-isActiveColor {
+    background-color: #EBE9E1;
+}
+
+.js-background {
+    background-color: #242e43;;
+    border-bottom: 1px solid gainsboro;
+}
