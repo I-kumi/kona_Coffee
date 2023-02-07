@@ -97,7 +97,7 @@ a:link {
         top: 0;
         width: 3.3333vw;
         height: 3.3333vw;
-        background-image: url("./../../images/hore/hore_logo_img.jpg");
+        background-image: url("../images/hore/hore_logo_img.jpg");
         background-repeat: no-repeat;
         background-position: top right;
         background-size: contain;
@@ -330,7 +330,7 @@ a:link {
     &__parallaxInner {
         height: 110%;
         top: 0;
-        background-image: url("./../../images/about/pc/about_img_pc.jpg");
+        background-image: url("../images/about/pc/about_img_pc.jpg");
         background-position: top 100% center;
         background-size: cover;
         position: relative;
@@ -531,7 +531,7 @@ a:link {
         width: 100vw;
         height: 200%;
         top: 0;
-        background-image: url("./../../images/location/location_img.jpg");
+        background-image: url("../images/location/location_img.jpg");
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center top;
@@ -799,7 +799,6 @@ a:link {
 
         &__mark {
             filter: invert(93%) sepia(9%) saturate(388%) hue-rotate(4deg) brightness(112%) contrast(84%);
-            // background-image: url(../img/logo/symbol.svg);
             background-repeat: no-repeat;
             background-position: bottom right;
             background-size: inherit;
@@ -861,7 +860,7 @@ a:link {
         }
 
         &__parallaxInner {
-            background-image: url("./../../images/about/sp/about_img_sp.jpg");
+            background-image: url("../images/about/sp/about_img_sp.jpg");
             background-position: inherit;
             background-size: contain;
         }
