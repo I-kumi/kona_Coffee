@@ -34,10 +34,6 @@ a:hover {
 
 #header {
   position: fixed;
-  top: 0;
-  left: 0;
-  transition: 1s;
-  transform: translateY(0);
 }
 
 .l-header {
@@ -859,10 +855,35 @@ a:hover {
     font-size: 2.8888vw;
   }
 }
-#header.js-headerHidden {
-  transform: translateY(-100%);
+#header.UpMove {
+  animation: UpAnime 0.5s forwards;
 }
 
+@keyframes UpAnime {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+/*　下に下がる動き　*/
+#header.DownMove {
+  animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 ._scrollFadeIn {
   opacity: 0;
   visibility: hidden;
