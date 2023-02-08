@@ -62,31 +62,86 @@
 //下から上
 ._scrollBothListUp {
     opacity: 0;
-    visibility: hidden;
-    transition: 1s;
-    transform: translate(0, 1rem);
+    transform: translateY(10px);
+    transition: all 1.0s;
 }
-
-.js-linkSlideUp {
+._scrollBothListUp.show {
     opacity: 1;
-    visibility: visible;
     transform: translateY(0);
+}
+._scrollBothListUp.show:nth-of-type(1) {
+    transition-delay: 0s;
+}
+._scrollBothListUp.show:nth-of-type(2) {
+    transition-delay: 0.2s;
+}
+._scrollBothListUp.show:nth-of-type(3) {
+    transition-delay: 0.4s;
 }
 
 //左から右
 ._linkSlideLeft {
     opacity: 0;
-    visibility: hidden;
-    transition: 1s;
     transform: translateX(-10%);
+    transition: all 1.0s;
 }
 
-.js-linkSlideLeft {
+._linkSlideLeft.show {
     opacity: 1;
-    visibility: visible;
-    transform: translateX(0);
+    transform: translateY(0);
+}
+._linkSlideLeft.show:nth-of-type(1) {
+    transition-delay: 0s;
+}
+._linkSlideLeft.show:nth-of-type(2) {
+    transition-delay: 0.1s;
+}
+._linkSlideLeft.show:nth-of-type(3) {
+    transition-delay: 0.2s;
+}
+._linkSlideLeft.show:nth-of-type(4) {
+    transition-delay: 0.3s;
+}
+._linkSlideLeft.show:nth-of-type(5) {
+    transition-delay: 0.4s;
+}
+._linkSlideLeft.show:nth-of-type(6) {
+    transition-delay: 0.5s;
+}
+._linkSlideLeft.show:nth-of-type(7) {
+    transition-delay: 0.6s;
+}
+._linkSlideLeft.show:nth-of-type(8) {
+    transition-delay: 0.7s;
+}
+._linkSlideLeft.show:nth-of-type(9) {
+    transition-delay: 0.8s;
 }
 
+//
+.js-imgBlur {
+    filter: blur(4px);
+    transition: all 1.0s;
+}
+
+.js-imgBlur.addBlur {
+    filter: blur(0);
+}
+.js-imgBlur.addBlur:nth-of-type(1) {
+    transition-delay: 0s;
+}
+.js-imgBlur.addBlur:nth-of-type(2) {
+    transition-delay: 0.1s;
+}
+.js-imgBlur.addBlur:nth-of-type(3) {
+    transition-delay: 0.2s;
+}
+.js-imgBlur.addBlur:nth-of-type(4) {
+    transition-delay: 0.3s;
+}
+.js-imgBlur.addBlur:nth-of-type(5) {
+    transition-delay: 0.4s;
+}
 
 
 //ナビゲーションメニューをクリックでモーダルの表示切り替え
@@ -106,19 +161,20 @@
     color: #242E43;
 }
 
+//menuボタン非表示
 .btn_open.js-btnIsaHidden {
     display: none;
+}
+
+//
+.l-header__logoDeepBlue.js-logoImg {
+    display: block;
 }
 
 //一定の位置までスクロールしたら文字を隠す
 .js-textHidden {
     opacity: 0;
     transition: 0.5s;
-}
-
-//
-.js-imgBlur {
-    filter: blur(4px);
 }
 
 //
@@ -129,4 +185,9 @@
 .js-background {
     background-color: #242e43;;
     border-bottom: 1px solid gainsboro;
+}
+
+//ヘッダーのテキストカラー
+.js-textColor {
+    color: #242E43;
 }

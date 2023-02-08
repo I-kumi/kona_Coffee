@@ -8,6 +8,9 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script type='text/javascript' src="JavaScriput/index.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script type="text/javascript" src="js/luxy/luxy.min.js"></script>
     <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="midnight.jquery.js"></script> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -28,20 +31,21 @@
               <nav class="l-header__navList">
                 <ul>
                   <li class="l-header__navItem">
-                    <a href="#about">About Us</a>
+                    <a class="l-header__navLink" href="#about">About Us</a>
                   </li>
                   <li class="l-header__navItem">
-                    <a href="#menu">Menu</a>
+                    <a class="l-header__navLink" href="#menu">Menu</a>
                   </li>
                   <li class="l-header__navItem">
-                    <a href="#shop">Shop</a>
+                    <a class="l-header__navLink" href="#shop">Shop</a>
                   </li>
                   <li class="l-header__navItem">
-                    <a href="#location">Locations</a>
+                    <a class="l-header__navLink" href="#location">Locations</a>
                   </li>
                 </ul>
               </nav>
-              <div class="l-header__logo"></div>
+              <div class="l-header__logoWhite"></div>
+              <div class="l-header__logoDeepBlue"></div>
             </div>
             <div class="c-header__btnBox js-menu-close">
               <span class="c-header__btn btn_open">MENU</span>
@@ -95,8 +99,8 @@
     <!--メインここから-->
     <div class="js-scroll__wrapper">
       <div class="js-scroll">
-        <main class="l-main">
-          <section class="p-hero" id="hero">
+        <main class="l-main"  id="luxy">
+          <section class="p-hero luxy-el" id="hero" data-speed-y="-8">
             <div class="p-hero__inner">
               <div class="p-hero__wrapper">
                 <div class="p-hero__container p-hero__container--main">
@@ -139,12 +143,13 @@
                   </div>
                   <div class="p-hero__mark">
                     <span class="p-hero__flashing">Scroll Down</span>
+                    <img src="./images/hero/hero_logoImg_white.jpg">
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="p-about" id="about" data-midnight="white">
+          <section class="p-about luxy-el" id="about" data-speed-y="-8">
             <div class="p-about__inner">
               <div class="p-about__container">
                 <div class="p-about__text">
@@ -184,23 +189,23 @@
               </div>
             </div>
           </section>
-          <section class="p-menu" id="menu" data-midnight="white">
+          <section class="p-menu luxy-el" id="menu" data-speed-y="-8">
             <div class="p-menu__inner">
               <div class="p-menu__title">
                 <h3 class="p-menu__titleBold _scrollSlideInLeft">Menu</h3>
               </div>
               <div class="p-menu__imgBox">
                 <ul class="p-menu__list">
-                  <li class="p-menu__listItem">
-                    <img class="_scrollBothListUp js-imgBlur" src="./images/menu/menu_img_1.jpg">
+                  <li class="p-menu__listItem _scrollBothListUp js-imgBlur">
+                    <img class="p-menu__img" src="./images/menu/menu_img_1.jpg">
                     <h4 class="p-menu__name _linkSlideLeft">Batch Brew<br>Regular 430 / Large 480</h4>
                   </li>
-                  <li class="p-menu__listItem">
-                    <img class="_scrollBothListUp js-imgBlur" src="./images/menu/manu_img_2.jpg">
+                  <li class="p-menu__listItem _scrollBothListUp js-imgBlur">
+                    <img class="p-menu__img" src="./images/menu/manu_img_2.jpg">
                     <h4 class="p-menu__name _linkSlideLeft">Piccolo<br>Regular 430</h4>
                   </li>
-                  <li class="p-menu__listItem">
-                    <img class="_scrollBothListUp js-imgBlur" src="./images/menu/menu_img_3.jpg">
+                  <li class="p-menu__listItem _scrollBothListUp js-imgBlur">
+                    <img class="p-menu__img" src="./images/menu/menu_img_3.jpg">
                     <h4 class="p-menu__name _linkSlideLeft">Latte<br>Regular 490 / Large 570</h4>
                   </li>
                 </ul>
@@ -287,7 +292,7 @@
               </div>
             </div>
           </section>
-          <section class="p-shop" id="shop" data-midnight="white">
+          <section class="p-shop luxy-el" id="shop" data-speed-y="-8">
             <div class="p-shop__inner">
               <h2 class="_scrollSlideInLeft">Shop</h2>
               <div class="p-shop__container">
@@ -299,12 +304,12 @@
                 </div>
                 <div class="p-shop__imgBox">
                   <ul class="p-shop__list">
-                    <li class="p-shop__item">
-                      <img class="p-shop__item--img1 _scrollBothListUp js-imgBlur" src="./images/shop/shop_img_1.jpg">
+                    <li class="p-shop__item _scrollBothListUp">
+                      <img class="p-shop__item--img js-imgBlur" src="./images/shop/shop_img_1.jpg">
                       <h4 class="p-shop__name _scrollSlideInLeft">Wholebean</h4>
                     </li>
-                    <li class="p-shop__item">
-                      <img class="p-shop__item--img2 _scrollBothListUp js-imgBlur" src="./images/shop/shop_img_2.jpg">
+                    <li class="p-shop__item _scrollBothListUp">
+                      <img class="p-shop__item--img2 js-imgBlur" src="./images/shop/shop_img_2.jpg">
                       <h4 class="p-shop__name _scrollSlideInLeft">Roasting</h4>
                     </li>
                   </ul>
@@ -320,19 +325,19 @@
               </div>
             </div>
           </section>
-          <section class="p-location" id="location" data-midnight="white">
+          <section class="p-location luxy-el" id="location" data-speed-y="-8">
             <div class="p-location__inner">
               <div class="p-location__img">
                 <div class="p-location__parallax _scrollSlideUp">
                   <div class="p-location__parallaxInner"></div>
                 </div>
               </div>
-              <div class="_scrollFadeIn _linkSlideLeft">
-                <div class="p-location__title">
+              <div class="">
+                <div class="p-location__title _linkSlideLeft">
                   <h2>Locations</h2>
                 </div>
                 <div class="p-location__text">
-                  <div class="p-location__address">
+                  <div class="p-location__address _linkSlideLeft">
                     <p>558-0053<br>
                       大阪市xx区xxxx1-1-11<br>
                       〇〇電車 〇〇駅すぐ<br>
@@ -347,8 +352,8 @@
                       We invite you to be a part of it all with us and<br>
                       thank you for your on going support.
                     </p>
-                    <nav class="_linkSlideLeft">
-                      <ul class="p-location__navList">
+                    <nav>
+                      <ul class="p-location__navList _linkSlideLeft">
                         <li class="p-location__navItem">
                           <a href="#about">About Us</a>
                         </li>
@@ -362,7 +367,7 @@
                           <a href="#top">Top</a>
                         </li>
                       </ul>
-                      <ul class="p-location__navList">
+                      <ul class="p-location__navList _linkSlideLeft">
                         <li class="p-location__navItem">
                           <a>Online Shop</a>
                         </li>
@@ -384,8 +389,8 @@
     </div>
     <!--メインここまで-->
     <!--フッターここから-->
-    <footer class="l-footer">
-      <div class="l-footer__inner">
+    <footer class="l-footer" id="luxy">
+      <div class="l-footer__inner luxy-el" data-speed-y="-8">
         <div class="l-footer__male">
           <p>Contact : </p>
           <p>Mail. <a href="">info@conacoffee.jp</a></p>

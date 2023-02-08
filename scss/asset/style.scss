@@ -16,12 +16,6 @@ a:hover {
     opacity: 0.5;
 }
 
-a:link {
-    color: inherit;
-    text-decoration: none;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
 .br_pc {
     display: block;
 }
@@ -35,11 +29,6 @@ a:link {
         display: none;
     }
 }
-
-// .white {
-//     background-color: #242E43;
-// }
-
 
 .l-main {
     width: 100%;
@@ -60,7 +49,8 @@ a:link {
         display: flex;
         padding: 1.5625vw 0;
         justify-content: space-between;
-        transition: 1s;
+        // transition: 1s;
+        color: #fff;
     }
 
     &__title {
@@ -70,7 +60,6 @@ a:link {
 
     &__title h1 {
         font-size: 1.55555vw;
-        color: #fff;
     }
 
     &__titleSp {
@@ -91,20 +80,33 @@ a:link {
         margin-left: 4.6875vw;
     }
 
-    &__navItem a {
+    &__navLink {
         color: #fff;
     }
 
-    &__logo {
+    &__logoWhite {
         position: absolute;
         right: 1.5625vw;
         top: 0;
         width: 3.3333vw;
         height: 3.3333vw;
-        background-image: url("../images/hero/hero_logo_img.jpg");
+        background-image: url("../images/hero/hero_logoImg_white.jpg");
         background-repeat: no-repeat;
         background-position: top right;
         background-size: contain;
+    }
+
+    &__logoDeepBlue {
+        position: absolute;
+        right: 1.5625vw;
+        top: 0;
+        width: 3.3333vw;
+        height: 3.3333vw;
+        background-image: url("../images/hero/hero_logoImg_deepBlue.jpg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: contain;
+        display: none;
     }
 
     &__navSp {
@@ -253,6 +255,10 @@ a:link {
         margin-right: 10px;
     }
 
+    &__mark img {
+        display: none;
+    }
+
     &__flashing {
         animation: blinking 2s ease-in-out infinite alternate;
     }
@@ -361,11 +367,11 @@ a:link {
     }
     &__imgBox {
         width: 68.75vw;
+        display: inline-block;
     }
 
     &__list {
         display: flex;
-        // -webkit-box-pack: justify;
         justify-content: space-between;
     }
 
@@ -802,15 +808,15 @@ a:link {
             line-height: 1.3;
         }
 
-        &__mark {
-            filter: invert(93%) sepia(9%) saturate(388%) hue-rotate(4deg) brightness(112%) contrast(84%);
-            background-repeat: no-repeat;
-            background-position: bottom right;
-            background-size: inherit;
+        &__mark img {
+            width: 5.3333vw;
+            height: 5.3333vw;
+            display: block;
+            padding-left: 27vw;
         }
 
-        &__mark p {
-            visibility: hidden;
+        &__mark span {
+            display: none;
         }
 
     }

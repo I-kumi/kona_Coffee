@@ -1,3 +1,8 @@
+window.onload = function() {
+    luxy.init();
+}
+
+
 // ページがロードされたら要素をフェードインさせる
 $(window).on('load',function(){
     setTimeout(function(){
@@ -18,26 +23,39 @@ $(function(){
         }
         pos = $(this).scrollTop();
     });
-
-    // var btn = 0;
-    // var menu = $('.c-header__btnBox');
-
-    // $(window).on('scroll', function () {
-    //     if ($(this).scrollTop() < btn) {
-    //         menu.removeClass('js-btnHidden');
-    //     }else{
-    //         menu.addClass('js-btnHidden');
-    //     }
-    //     btn = $(this).scrollTop();
-    // });
 });
 
-//メインページがheader部分までスクロールされたら背景色をつけるクラスを付与
+//スクロール時ページの背景色によってヘッダーの文字色変更
 $(window).on('scroll', function () {
-    if (800 < $(this).scrollTop()) {
-        $('.l-header__container').addClass('js-background');
+    if (760 < $(this).scrollTop()) {
+        $('.l-header__title').addClass('js-textColor');
     } else {
-        $('.l-header__container').removeClass('js-background');
+        $('.l-header__title').removeClass('js-textColor');
+    }
+});
+
+$(window).on('scroll', function () {
+    if (760 < $(this).scrollTop()) {
+        $('.l-header__navLink').addClass('js-textColor');
+    } else {
+        $('.l-header__navLink').removeClass('js-textColor');
+    }
+});
+
+$(window).on('scroll', function () {
+    if (760 < $(this).scrollTop()) {
+        $('.c-header__btnBox').addClass('js-textColor');
+    } else {
+        $('.c-header__btnBox').removeClass('js-textColor');
+    }
+});
+
+//スクロール時ページの背景色によって画像の色を変更
+$(window).on('scroll', function () {
+    if (700 < $(this).scrollTop()) {
+        $('.l-header__logoDeepBlue').addClass('js-logoImg');
+    } else {
+        $('.l-header__logoDeepBlue').removeClass('js-logoImg');
     }
 });
 
@@ -82,32 +100,47 @@ $(window).on('scroll', function () {
 //スクロール時に発生するアニメーション
 $(function() {
     $(window).on('scroll',function (){
-        //リストの項目を時間差で表示する
-        $('._scrollBothListUp').each(function(i){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            let delay = 150;
-            if (scroll > elemPos - windowHeight){
-                $(this).delay(i * delay).queue(function(next){
-                    $(this).addClass('js-linkSlideUp');
-                    next();
-                });
-            }
+        //リストの項目を下から上に時間差で表示する
+        $(window).on('scroll resize', function() {
+            var setHeight = 100;
+            var wHeight = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            $('._scrollBothListUp').each(function() {
+                var targetPosition = $(this).offset().top;
+                if(scrollTop > targetPosition - wHeight + setHeight) {
+                    $(this).addClass('show');
+
+                }
+            });
         });
 
-        //リストの項目を時間差で表示する
-        $('._linkSlideLeft').each(function(i){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            let delay = 30;
-            if (scroll > elemPos - windowHeight){
-                $(this).delay(i * delay).queue(function(next){
-                    $(this).addClass('js-linkSlideLeft');
-                    next();
-                });
-            }
+        //リストの項目を左から右に時間差で表示する
+        $(window).on('scroll resize', function() {
+            var setHeight = 100;
+            var wHeight = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            $('._linkSlideLeft').each(function() {
+                var targetPosition = $(this).offset().top;
+                if(scrollTop > targetPosition - wHeight + setHeight) {
+                    $(this).addClass('show');
+
+                }
+            });
+        });
+
+        //ぼかしの取り外し
+        $(window).on('scroll resize', function() {
+            var setHeight = 100;
+            var wHeight = $(window).height();
+            var scrollTop = $(window).scrollTop();
+            $('.js-imgBlur').each(function() {
+                var targetPosition = $(this).offset().top;
+                if(scrollTop > targetPosition - wHeight + setHeight) {
+                    setTimeout(() => {
+                        $(this).addClass('addBlur');
+                    },1000);
+                }
+            });
         });
 
         //スライドアップ
@@ -131,16 +164,16 @@ $(function() {
         });
 
         //ぼかしの取り外し
-        $('._scrollBothListUp').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight){
-                setTimeout(() => {
-                    $(this).removeClass('js-imgBlur');
-                },1200);
-            }
-        });
+        // $('.p-menu__img, .p-shop__item--img, .p-shop__item--img2').each(function(){
+        //     var elemPos = $(this).offset().top;
+        //     var scroll = $(window).scrollTop();
+        //     var windowHeight = $(window).height();
+        //     if (scroll > elemPos - windowHeight){
+        //         setTimeout(() => {
+        //             $(this).removeClass('js-imgBlur');
+        //         },1200);
+        //     }
+        // });
     });
 });
 
