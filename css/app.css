@@ -37,6 +37,7 @@ a:hover {
   top: 0;
   left: 0;
   transition: 1s;
+  transform: translateY(0);
 }
 
 .l-header {
@@ -858,7 +859,7 @@ a:hover {
     font-size: 2.8888vw;
   }
 }
-.l-header__container.js-headerHidden {
+#header.js-headerHidden {
   transform: translateY(-100%);
 }
 

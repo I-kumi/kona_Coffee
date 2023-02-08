@@ -1,4 +1,4 @@
-.l-header__container.js-headerHidden {
+#header.js-headerHidden {
   transform: translateY(-100%);
 }
 
