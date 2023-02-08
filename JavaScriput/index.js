@@ -1,7 +1,14 @@
+// ページがロードされたら要素をフェードインさせる
+$(window).on('load',function(){
+    setTimeout(function(){
+		$('.l-header__wrapper, .p-hero__wrapper').fadeIn(1000);
+	},1000);
+});
+
 //スクロールでヘッダー部分非表示
 $(function(){
     var pos = 0;
-    var header = $('.l-header__inner');
+    var header = $('.l-header__container');
 
     $(window).on('scroll', function(){
         if($(this).scrollTop() < pos ){
@@ -12,17 +19,17 @@ $(function(){
         pos = $(this).scrollTop();
     });
 
-    var btn = 0;
-    var menu = $('.c-header__btnBox');
+    // var btn = 0;
+    // var menu = $('.c-header__btnBox');
 
-    $(window).on('scroll', function () {
-        if ($(window).width() < 769) {
-            menu.removeClass('js-headerHidden');
-        }else{
-            menu.addClass('js-headerHidden');
-        }
-        btn = $(this).scrollTop();
-    });
+    // $(window).on('scroll', function () {
+    //     if ($(this).scrollTop() < btn) {
+    //         menu.removeClass('js-btnHidden');
+    //     }else{
+    //         menu.addClass('js-btnHidden');
+    //     }
+    //     btn = $(this).scrollTop();
+    // });
 });
 
 //メインページがheader部分までスクロールされたら背景色をつけるクラスを付与
@@ -167,7 +174,7 @@ $(window).on('scroll', function () {
     }
 });
 
-//
+//スクロールで画像動かす
 // $(window).on('scroll', function(){
 //     var scrollTop = $(window).scrollTop();
 //     var bgPosition = scrollTop / 2;

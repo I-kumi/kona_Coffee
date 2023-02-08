@@ -1,6 +1,5 @@
-.l-header__inner.js-headerHidden {
-  transition: 1s;
-  transform: translateY(-200%);
+.l-header__container.js-headerHidden {
+  transform: translateY(-100%);
 }
 
 ._scrollFadeIn {

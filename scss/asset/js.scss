@@ -1,9 +1,12 @@
 
 //スクロールでヘッダー非表示
-.l-header__inner.js-headerHidden {
-    transition: 1s;
-    transform: translateY(-200%);
+.l-header__container.js-headerHidden {
+    transform: translateY(-100%);
 }
+
+// .c-header__btnBox.js-btnHidden {
+//     transform: translateY(-100%);
+// }
 
 //スクロールで文字をフェードイン
 ._scrollFadeIn {

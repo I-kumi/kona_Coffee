@@ -17,30 +17,35 @@
     <!--ヘッダーここから-->
     <header class="l-header">
       <div class="l-header__inner">
-        <div class="l-header__container">
-          <div class="l-header__title">
-            <h1>
-              <a>Kona<br class="l-header__titleSp"> Coffee Roasters</a>
-            </h1>
-          </div>
-          <div class="l-header__nav">
-            <nav class="l-header__navList">
-              <ul>
-                <li class="l-header__navItem">
-                  <a href="#about">About Us</a>
-                </li>
-                <li class="l-header__navItem">
-                  <a href="#menu">Menu</a>
-                </li>
-                <li class="l-header__navItem">
-                  <a href="#shop">Shop</a>
-                </li>
-                <li class="l-header__navItem">
-                  <a href="#location">Locations</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="l-header__logo"></div>
+        <div class="l-header__wrapper">
+          <div class="l-header__container">
+            <div class="l-header__title">
+              <h1>
+                <a>Kona<br class="l-header__titleSp"> Coffee Roasters</a>
+              </h1>
+            </div>
+            <div class="l-header__nav">
+              <nav class="l-header__navList">
+                <ul>
+                  <li class="l-header__navItem">
+                    <a href="#about">About Us</a>
+                  </li>
+                  <li class="l-header__navItem">
+                    <a href="#menu">Menu</a>
+                  </li>
+                  <li class="l-header__navItem">
+                    <a href="#shop">Shop</a>
+                  </li>
+                  <li class="l-header__navItem">
+                    <a href="#location">Locations</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="l-header__logo"></div>
+            </div>
+            <div class="c-header__btnBox js-menu-close">
+              <span class="c-header__btn btn_open">MENU</span>
+            </div>
           </div>
         </div>
         <div class="l-header__navSp">
@@ -82,7 +87,6 @@
           </div>
         </div>
         <div class="c-header__btnBox js-menu-close">
-          <span class="c-header__btn btn_open">MENU</span>
           <span class="c-header__btn btn_close">CLOSE</span>
         </div>
       </div>
@@ -94,46 +98,48 @@
         <main class="l-main">
           <section class="p-hero" id="hero">
             <div class="p-hero__inner">
-              <div class="p-hero__container hero__container--main">
-                <div class="p-hero__text">
-                  <p>Specialty<br>Coffee Roastery</p>
-                  <p>EST. 2021</p>
-                </div>
-                <div class="p-hero__img">
-                  <div class="p-hero__slickSlider js-slide">
-                    <div class="p-hero__slickList">
-                      <div class="p-hero__slickTrack">
-                          <img class="p-hero__slickTrack--img" src="./images/hero/hero_slide_img_1.jpg" alt="">
-                          <img class="p-hero__slickTrack--img" src="./images/hero/hero_slide_img_2.jpg" alt="">
-                          <img class="p-hero__slickTrack--img" src="./images/hero/hero_slide_img_3.jpg" alt="">
-                          <img class="p-hero__slickTrack--img" src="./images/hero/hero_slide_img_4.jpg" alt="">
+              <div class="p-hero__wrapper">
+                <div class="p-hero__container p-hero__container--main">
+                  <div class="p-hero__text">
+                    <p>Specialty<br>Coffee Roastery</p>
+                    <p>EST. 2021</p>
+                  </div>
+                  <div class="p-hero__img">
+                    <div class="p-hero__slickSlider js-slide">
+                      <div class="p-hero__slickList">
+                        <div class="p-hero__slickTrack">
+                            <img class="p-hero__slickTrack--img" src="./images/hero/hero_slide_img_1.jpg" alt="">
+                            <img class="p-hero__slickTrack--img" src="./images/hero/hero_slide_img_2.jpg" alt="">
+                            <img class="p-hero__slickTrack--img" src="./images/hero/hero_slide_img_3.jpg" alt="">
+                            <img class="p-hero__slickTrack--img" src="./images/hero/hero_slide_img_4.jpg" alt="">
+                        </div>
                       </div>
+                      <ul class="p-hero__slickDots">
+                        <li class="js-isActiveColor">
+                          <button>1</button>
+                        </li>
+                        <li>
+                          <button>2</button>
+                        </li>
+                        <li>
+                          <button>3</button>
+                        </li>
+                        <li>
+                          <button>4</button>
+                        </li>
+                      </ul>
                     </div>
-                    <ul class="p-hero__slickDots">
-                      <li class="js-isActiveColor">
-                        <button>1</button>
-                      </li>
-                      <li>
-                        <button>2</button>
-                      </li>
-                      <li>
-                        <button>3</button>
-                      </li>
-                      <li>
-                        <button>4</button>
-                      </li>
-                    </ul>
                   </div>
                 </div>
-              </div>
-              <div class="p-hero__subContainer">
-                <div class="p-hero__subText">
-                  <p>Kona is a small batch roastery.<br>
-                    We roast with care, keep it fresh,<br>
-                    honest and handmade.</p>
-                </div>
-                <div class="p-hero__mark">
-                  <span class="p-hero__flashing">Scroll Down</span>
+                <div class="p-hero__subContainer">
+                  <div class="p-hero__subText">
+                    <p>Kona is a small batch roastery.<br>
+                      We roast with care, keep it fresh,<br>
+                      honest and handmade.</p>
+                  </div>
+                  <div class="p-hero__mark">
+                    <span class="p-hero__flashing">Scroll Down</span>
+                  </div>
                 </div>
               </div>
             </div>

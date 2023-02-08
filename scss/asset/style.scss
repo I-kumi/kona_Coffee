@@ -49,14 +49,18 @@ a:link {
 .l-header {
     position: relative;
 
+    &__wrapper {
+        display: none;
+    }
+
     &__container {
-        // color: #fff;
         position: fixed;
         z-index: 100;
         width: 100%;
         display: flex;
         padding: 1.5625vw 0;
         justify-content: space-between;
+        transition: 1s;
     }
 
     &__title {
@@ -127,13 +131,12 @@ a:link {
         position: relative;
     }
 
+    &__wrapper {
+        display: none;
+    }
+
     &__container {
-        position: absolute;
-        top: 54%;
-        left: 0;
         width: 100%;
-        transform: translateY(-50%);
-        padding-left: 1.5625vw;
         display: flex;
         justify-content: space-between;
     }
@@ -141,14 +144,14 @@ a:link {
     &__container--main {
         position: absolute;
         top: 54%;
-        transform: translateY(-50%);
         left: 0;
-        padding-left: 1.5625vw;
+        transform: translateY(-50%);
     }
 
     &__text {
         display: flex;
         margin-top: 13.5%;
+        margin-left: 1.5625vw;
     }
 
     &__text p:first-child {
@@ -745,7 +748,7 @@ a:link {
 
     .c-header__btn {
         position: absolute;
-        top: 6vw;
+        top: 0;
         right: 8vw;
     }
 
@@ -753,6 +756,8 @@ a:link {
         display: none;
         visibility: hidden;
         opacity: 0;
+        top: 5vw;
+        right: 4vw;
     }
 
     //.p-hero//
