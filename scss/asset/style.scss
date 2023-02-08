@@ -34,25 +34,39 @@ a:hover {
     width: 100%;
 }
 
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
 //l-header//
 .l-header {
     position: relative;
 
-    // &__wrapper {
-       
-    // }
-
     &__container {
-        position: fixed;
-        top: 0;
-        left: 0;
         width: 100%;
-        transition: 1s;
-        z-index: 100;
+        z-index: 300;
         display: flex;
         padding: 1.5625vw 0;
         justify-content: space-between;
         color: #fff;
+    }
+
+    &__container.UpMove{
+        animation: UpAnime 0.5s forwards;
+    }
+    
+    @keyframes UpAnime{
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
     }
 
     &__title {
@@ -650,9 +664,9 @@ a:hover {
     //l-header//
     .l-header {
         &__container {
-            position: fixed;
-            top: 0;
-            left: 0;
+            // position: fixed;
+            // top: 0;
+            // left: 0;
             padding: 5.12vw 4.35vw;
         }
 

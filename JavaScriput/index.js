@@ -1,9 +1,3 @@
-
-window.onload = function() {
-    luxy.init();
-}
-
-
 // ページがロードされたら要素をフェードインさせる
 $(window).on('load',function(){
     setTimeout(function(){
@@ -84,19 +78,35 @@ $(window).on('scroll', function () {
 });
 
 
+
+
 //スクロール時に発生するアニメーション
 $(function() {
     //スクロールでヘッダー部分非表示
-    var pos = 0;
-    var header = $('.l-header__container');
+    // var pos = 0;
+    // var header = $('.l-header__container');
+
+    // $(window).on('scroll', function(){
+    //     if($(this).scrollTop() > pos ){
+    //         header.addClass('js-headerHidden');
+    //     }else{
+    //         header.removeClass('js-headerHidden');
+    //     }
+    //     pos = $(this).scrollTop();
+    // });
+
+    const fixedElm = $('#header');
+    let scrollPoint = 0;
+    let lastPoint = 0;
 
     $(window).on('scroll', function(){
-        if($(this).scrollTop() > pos ){
-            header.addClass('js-headerHidden');
+        scrollPoint = window.scrollY;
+        if(scrollPoint > lastPoint){
+            fixedElm.addClass('js-headerHidden');
         }else{
-            header.removeClass('js-headerHidden');
+            fixedElm.removeClass('js-headerHidden');
         }
-        pos = $(this).scrollTop();
+        lastPoint = scrollPoint;
     });
 
     $(window).on('scroll',function (){
