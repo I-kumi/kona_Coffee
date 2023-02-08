@@ -647,12 +647,6 @@ a:hover {
         display: block;
     }
 
-    .c-header {
-        &__btnBox {
-            display: block;
-        }
-    }
-
     //l-header//
     .l-header {
         &__container {
@@ -740,14 +734,6 @@ a:hover {
         &__navSpMail a {
             text-decoration: underline;
         }
-
-        &__btnBox {
-            display: block;
-            position: relative;
-            font-size: 1.5vw;
-            z-index: 300;
-        }
-
     }
 
     .c-header__btnBox {

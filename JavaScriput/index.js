@@ -7,7 +7,7 @@ window.onload = function() {
 // ページがロードされたら要素をフェードインさせる
 $(window).on('load',function(){
     setTimeout(function(){
-		$('.l-header__title, .l-header__nav, .p-hero__wrapper').fadeIn(1000);
+		$('.l-header__title, .l-header__nav, .p-hero__wrapper, .btn_open').fadeIn(1000);
 	},1500);
 });
 
@@ -91,10 +91,10 @@ $(function() {
     var header = $('.l-header__container');
 
     $(window).on('scroll', function(){
-        if($(this).scrollTop() < pos ){
-            header.removeClass('js-headerHidden');
-        }else{
+        if($(this).scrollTop() > pos ){
             header.addClass('js-headerHidden');
+        }else{
+            header.removeClass('js-headerHidden');
         }
         pos = $(this).scrollTop();
     });

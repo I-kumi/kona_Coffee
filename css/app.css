@@ -525,9 +525,6 @@ a:hover {
   .br_sp {
     display: block;
   }
-  .c-header__btnBox {
-    display: block;
-  }
   .l-header__container {
     position: fixed;
     top: 0;
@@ -596,12 +593,6 @@ a:hover {
   }
   .l-header__navSpMail a {
     text-decoration: underline;
-  }
-  .l-header__btnBox {
-    display: block;
-    position: relative;
-    font-size: 1.5vw;
-    z-index: 300;
   }
   .c-header__btnBox {
     color: #fff;
