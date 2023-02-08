@@ -1,18 +1,20 @@
-window.onload = function() {
-    luxy.init();
-}
+
+// window.onload = function() {
+//     luxy.init();
+// }
+
 
 // ページがロードされたら要素をフェードインさせる
 $(window).on('load',function(){
     setTimeout(function(){
-		$('.l-header__wrapper, .p-hero__wrapper').fadeIn(1000);
-	},1000);
+		$('.l-header__title, .l-header__nav, .p-hero__wrapper').fadeIn(1000);
+	},1500);
 });
 
 //スクロールでヘッダー部分非表示
 $(function(){
     var pos = 0;
-    var header = $('.l-header__container');
+    var header = $('.l-header__wrapper');
 
     $(window).on('scroll', function(){
         if($(this).scrollTop() < pos ){

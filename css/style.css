@@ -36,23 +36,23 @@ a:hover {
   position: relative;
 }
 .l-header__wrapper {
-  display: none;
-}
-.l-header__container {
   position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
   width: 100%;
+  transition: 1s;
+  z-index: 100;
+}
+.l-header__container {
   display: flex;
   padding: 1.5625vw 0;
   justify-content: space-between;
-  transition: 1s;
   color: #fff;
-  transition: all 0.3s ease-out;
 }
 .l-header__title {
   width: 30%;
   padding: 0 1.5625vw;
+  display: none;
 }
 .l-header__title h1 {
   font-size: 1.55555vw;
@@ -63,6 +63,7 @@ a:hover {
 .l-header__nav {
   width: 50vw;
   position: relative;
+  display: none;
 }
 .l-header__navList ul {
   display: flex;
