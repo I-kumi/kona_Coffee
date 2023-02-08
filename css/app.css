@@ -529,6 +529,9 @@ a:hover {
     display: block;
   }
   .l-header__container {
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 5.12vw 4.35vw;
     background: none;
   }
