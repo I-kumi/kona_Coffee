@@ -1,6 +1,6 @@
 
 //スクロールでヘッダー非表示
-#header.js-headerHidden {
+.l-header__container.js-headerHidden {
     transform: translateY(-100%);
 }
 

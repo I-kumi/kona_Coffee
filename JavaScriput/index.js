@@ -83,31 +83,31 @@ $(window).on('scroll', function () {
 //スクロール時に発生するアニメーション
 $(function() {
     //スクロールでヘッダー部分非表示
-    // var pos = 0;
-    // var header = $('.l-header__container');
-
-    // $(window).on('scroll', function(){
-    //     if($(this).scrollTop() > pos ){
-    //         header.addClass('js-headerHidden');
-    //     }else{
-    //         header.removeClass('js-headerHidden');
-    //     }
-    //     pos = $(this).scrollTop();
-    // });
-
-    const fixedElm = $('#header');
-    let scrollPoint = 0;
-    let lastPoint = 0;
+    var pos = -400;
+    var header = $('.l-header__container');
 
     $(window).on('scroll', function(){
-        scrollPoint = window.scrollY;
-        if(scrollPoint > lastPoint){
-            fixedElm.addClass('js-headerHidden');
+        if($(this).scrollTop() > pos ){
+            header.addClass('js-headerHidden');
         }else{
-            fixedElm.removeClass('js-headerHidden');
+            header.removeClass('js-headerHidden');
         }
-        lastPoint = scrollPoint;
+        pos = $(this).scrollTop();
     });
+
+    // const fixedElm = $('#header');
+    // let scrollPoint = 0;
+    // let lastPoint = 0;
+
+    // $(window).on('scroll', function(){
+    //     scrollPoint = window.scrollY;
+    //     if(scrollPoint > lastPoint){
+    //         fixedElm.addClass('js-headerHidden');
+    //     }else{
+    //         fixedElm.removeClass('js-headerHidden');
+    //     }
+    //     lastPoint = scrollPoint;
+    // });
 
     $(window).on('scroll',function (){
 
