@@ -2,7 +2,6 @@ window.onload = function() {
     luxy.init();
 }
 
-
 // ページがロードされたら要素をフェードインさせる
 $(window).on('load',function(){
     setTimeout(function(){

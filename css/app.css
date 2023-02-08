@@ -45,7 +45,9 @@ a:hover {
   display: flex;
   padding: 1.5625vw 0;
   justify-content: space-between;
+  transition: 1s;
   color: #fff;
+  transform: translateY(0);
 }
 .l-header__title {
   width: 30%;
