@@ -38,16 +38,17 @@ a:hover {
 .l-header {
     position: relative;
 
-    &__wrapper {
+    // &__wrapper {
+       
+    // }
+
+    &__container {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         transition: 1s;
         z-index: 100;
-    }
-
-    &__container {
         display: flex;
         padding: 1.5625vw 0;
         justify-content: space-between;
@@ -64,9 +65,9 @@ a:hover {
         font-size: 1.55555vw;
     }
 
-    &__titleSp {
-        display: none;
-    }
+    // &__titleSp {
+    //     display: none;
+    // }
 
     &__nav {
         width: 50vw;
@@ -672,7 +673,7 @@ a:hover {
             display: block;
         }
 
-        &__nav {
+        &__navList {
             display: none;
         }
 

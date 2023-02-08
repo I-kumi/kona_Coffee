@@ -35,15 +35,13 @@ a:hover {
 .l-header {
   position: relative;
 }
-.l-header__wrapper {
+.l-header__container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   transition: 1s;
   z-index: 100;
-}
-.l-header__container {
   display: flex;
   padding: 1.5625vw 0;
   justify-content: space-between;
@@ -56,9 +54,6 @@ a:hover {
 }
 .l-header__title h1 {
   font-size: 1.55555vw;
-}
-.l-header__titleSp {
-  display: none;
 }
 .l-header__nav {
   width: 50vw;
@@ -547,7 +542,7 @@ a:hover {
   .l-header__titleSp {
     display: block;
   }
-  .l-header__nav {
+  .l-header__navList {
     display: none;
   }
   .l-header__navSpListMain li:not(:first-child) {
@@ -857,7 +852,7 @@ a:hover {
     font-size: 2.8888vw;
   }
 }
-.l-header__wrapper.js-headerHidden {
+.l-header__container.js-headerHidden {
   transform: translateY(-100%);
 }
 
