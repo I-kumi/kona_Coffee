@@ -40,6 +40,7 @@ a:hover {
 }
 .l-header__container {
   position: fixed;
+  top: 0;
   z-index: 100;
   width: 100%;
   display: flex;
@@ -47,7 +48,7 @@ a:hover {
   justify-content: space-between;
   transition: 1s;
   color: #fff;
-  transform: translateY(0);
+  transition: all 0.3s ease-out;
 }
 .l-header__title {
   width: 30%;
