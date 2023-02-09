@@ -23,14 +23,6 @@ $(window).on('scroll', function () {
     }
 });
 
-$(window).on('scroll', function () {
-    if (760 < $(this).scrollTop()) {
-        $('.c-header__btnBox').addClass('js-textColorYellow');
-    } else {
-        $('.c-header__btnBox').removeClass('js-textColorYellow');
-    }
-});
-
 //スクロール時ページの背景色によって画像の色を変更
 $(window).on('scroll', function () {
     if (700 < $(this).scrollTop()) {
