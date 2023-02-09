@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family:'cursive', 'angie-sans', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+    font-family: "Times New Roman", serif;
 }
 
 a {
@@ -32,6 +32,7 @@ a:hover {
 
 .l-main {
     width: 100%;
+    background-color: #edece8;
 }
 
 #header {
@@ -48,22 +49,21 @@ a:hover {
         display: flex;
         padding: 1.5625vw 0;
         justify-content: space-between;
-        color: #fff;
     }
 
     &__container.UpMove{
         animation: UpAnime 0.5s forwards;
     }
-    
+
     @keyframes UpAnime{
-      from {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      to {
-        opacity: 0;
-        transform: translateY(-100px);
-      }
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(-100px);
+        }
     }
 
     &__title {
@@ -76,9 +76,9 @@ a:hover {
         font-size: 1.55555vw;
     }
 
-    // &__titleSp {
-    //     display: none;
-    // }
+    &__titleSp {
+        display: none;
+    }
 
     &__nav {
         width: 50vw;
@@ -95,7 +95,7 @@ a:hover {
         margin-left: 4.6875vw;
     }
 
-    &__navLink {
+    &__titleLink, &__navLink {
         color: #fff;
     }
 
@@ -501,7 +501,7 @@ a:hover {
 
     &__list img {
         width: 100%;
-        height: 85%;
+        height: 78%;
         object-fit: cover;
     }
 
@@ -608,10 +608,10 @@ a:hover {
 
 //l-footer//
 .l-footer {
+    background-color: #edece8;
 
     &__inner {
-        margin-top: 11vh;
-        padding: 0 1.5625vw 7.5625vw;
+        padding: 11vw 1.5625vw 7.5625vw;
         display: flex;
         -webkit-box-align: end;
         align-items: flex-end;
@@ -627,7 +627,7 @@ a:hover {
         line-height: 2;
     }
 
-    &__mail a {
+    &__maleLink {
         text-decoration: underline;
         color: #000;
     }
@@ -997,7 +997,7 @@ a:hover {
         }
 
         &__list img {
-            height: 90%;
+            height: 70%;
         }
 
         &__link {
@@ -1065,9 +1065,7 @@ a:hover {
     .l-footer {
         
         &__inner {
-            // width: 100%;
-            margin-top: calc(var(--vh, 1vh) * 4.5);
-            padding: 0 4.35vw 3vw;
+            padding: 6vw 4.35vw 3vw;
             flex-direction: column;
             align-items: flex-start;
         }
@@ -1083,7 +1081,7 @@ a:hover {
 
         &__copyright {
             width: 100%;
-            margin-top: calc(var(--vh, 1vh) * 11.5);
+            margin-top: 5vw;
             text-align: center;
             font-size: 2.8888vw;
         }

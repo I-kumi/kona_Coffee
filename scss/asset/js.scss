@@ -1,8 +1,5 @@
 
 //スクロールでヘッダー非表示
-// #header.js-headerHidden {
-//     transform: translateY(-100%);
-// }
 #header.UpMove{
 	animation: UpAnime 0.5s forwards;
 }
@@ -18,8 +15,7 @@
     }
 }
 
-/*　下に下がる動き　*/
-
+//下に下がる動き
 #header.DownMove{
 	animation: DownAnime 0.5s forwards;
 }
@@ -205,16 +201,24 @@
 }
 
 //
-.p-hero__slickDots li.js-isActiveColor {
-    background-color: #EBE9E1;
+.js-elementIsHidden {
+    display: none;
 }
 
-.js-background {
-    background-color: #242e43;;
-    border-bottom: 1px solid gainsboro;
+//
+.p-hero__slickDots li.js-isActiveColor {
+    background-color: #EBE9E1;
 }
 
 //ヘッダーのテキストカラー
 .js-textColor {
     color: #242E43;
+}
+
+.js-textColorGreen {
+    color: #00f472;
+}
+
+.js-textColorYellow {
+    color: #fffb00;
 }

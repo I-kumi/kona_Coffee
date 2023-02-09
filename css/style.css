@@ -1,10 +1,9 @@
-@charset "UTF-8";
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "cursive", "angie-sans", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, sans-serif;
+  font-family: "Times New Roman", serif;
 }
 
 a {
@@ -30,6 +29,7 @@ a:hover {
 
 .l-main {
   width: 100%;
+  background-color: #edece8;
 }
 
 #header {
@@ -45,7 +45,6 @@ a:hover {
   display: flex;
   padding: 1.5625vw 0;
   justify-content: space-between;
-  color: #fff;
 }
 .l-header__container.UpMove {
   animation: UpAnime 0.5s forwards;
@@ -68,6 +67,9 @@ a:hover {
 .l-header__title h1 {
   font-size: 1.55555vw;
 }
+.l-header__titleSp {
+  display: none;
+}
 .l-header__nav {
   width: 50vw;
   position: relative;
@@ -80,7 +82,7 @@ a:hover {
 .l-header__navItem:not(:first-child) {
   margin-left: 4.6875vw;
 }
-.l-header__navLink {
+.l-header__titleLink, .l-header__navLink {
   color: #fff;
 }
 .l-header__logoWhite {
@@ -416,7 +418,7 @@ a:hover {
 }
 .p-shop__list img {
   width: 100%;
-  height: 85%;
+  height: 78%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -500,9 +502,11 @@ a:hover {
   margin-left: 3vw;
 }
 
+.l-footer {
+  background-color: #edece8;
+}
 .l-footer__inner {
-  margin-top: 11vh;
-  padding: 0 1.5625vw 7.5625vw;
+  padding: 11vw 1.5625vw 7.5625vw;
   display: flex;
   align-items: flex-end;
   font-size: 1vw;
@@ -514,7 +518,7 @@ a:hover {
   font-size: 1vw;
   line-height: 2;
 }
-.l-footer__mail a {
+.l-footer__maleLink {
   text-decoration: underline;
   color: #000;
 }
@@ -788,7 +792,7 @@ a:hover {
     margin-top: 3vw;
   }
   .p-shop__list img {
-    height: 90%;
+    height: 70%;
   }
   .p-shop__link {
     margin-top: calc(var(--vh, 1vh) * 5);
@@ -836,8 +840,7 @@ a:hover {
     margin-top: calc(var(--vh, 1vh) * 2.3);
   }
   .l-footer__inner {
-    margin-top: calc(var(--vh, 1vh) * 4.5);
-    padding: 0 4.35vw 3vw;
+    padding: 6vw 4.35vw 3vw;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -850,7 +853,7 @@ a:hover {
   }
   .l-footer__copyright {
     width: 100%;
-    margin-top: calc(var(--vh, 1vh) * 11.5);
+    margin-top: 5vw;
     text-align: center;
     font-size: 2.8888vw;
   }

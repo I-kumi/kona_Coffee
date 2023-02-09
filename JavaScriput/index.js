@@ -9,9 +9,9 @@ $(window).on('load',function(){
 //スクロール時ページの背景色によってヘッダーの文字色変更
 $(window).on('scroll', function () {
     if (760 < $(this).scrollTop()) {
-        $('.l-header__title').addClass('js-textColor');
+        $('.l-header__titleLink').addClass('js-textColor');
     } else {
-        $('.l-header__title').removeClass('js-textColor');
+        $('.l-header__titleLink').removeClass('js-textColor');
     }
 });
 
@@ -25,9 +25,9 @@ $(window).on('scroll', function () {
 
 $(window).on('scroll', function () {
     if (760 < $(this).scrollTop()) {
-        $('.c-header__btnBox').addClass('js-textColor');
+        $('.c-header__btnBox').addClass('js-textColorYellow');
     } else {
-        $('.c-header__btnBox').removeClass('js-textColor');
+        $('.c-header__btnBox').removeClass('js-textColorYellow');
     }
 });
 
@@ -77,32 +77,25 @@ $(window).on('scroll', function () {
     }
 });
 
-var beforePos = 0;//スクロールの値の比較用の設定
-
-//スクロール途中でヘッダーが消え、上にスクロールすると復活する設定を関数にまとめる
+var beforePos = 0;
 function ScrollAnime() {
-    var elemTop = $('.p-hero__container').offset().top;//#area-2の位置まできたら
+    var elemTop = $('.p-hero__container').offset().top;
 	var scroll = $(window).scrollTop();
-    //ヘッダーの出し入れをする
     if(scroll == beforePos) {
-		//IE11対策で処理を入れない
     }else if(elemTop > scroll || 0 > scroll - beforePos){
-		//ヘッダーが上から出現する
-		$('#header').removeClass('UpMove');	//#headerにUpMoveというクラス名を除き
-		$('#header').addClass('DownMove');//#headerにDownMoveのクラス名を追加
+		$('#header').removeClass('UpMove');
+		$('#header').addClass('DownMove');
     }else {
-		//ヘッダーが上に消える
-        $('#header').removeClass('DownMove');//#headerにDownMoveというクラス名を除き
-		$('#header').addClass('UpMove');//#headerにUpMoveのクラス名を追加
+        $('#header').removeClass('DownMove');
+		$('#header').addClass('UpMove');
     }
-    
-    beforePos = scroll;//現在のスクロール値を比較用のbeforePosに格納
-}
 
+    beforePos = scroll;
+}
 
 // 画面をスクロールをしたら動かしたい場合の記述
 $(window).scroll(function () {
-	ScrollAnime();//スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
+	ScrollAnime();
 });
 
 
@@ -110,33 +103,6 @@ $(window).scroll(function () {
 
 //スクロール時に発生するアニメーション
 $(function() {
-    //スクロールでヘッダー部分非表示
-    // var pos = -400;
-    // var header = $('.l-header__container');
-
-    // $(window).on('scroll', function(){
-    //     if($(this).scrollTop() > pos ){
-    //         header.addClass('js-headerHidden');
-    //     }else{
-    //         header.removeClass('js-headerHidden');
-    //     }
-    //     pos = $(this).scrollTop();
-    // });
-
-    // const fixedElm = $('#header');
-    // let scrollPoint = -400;
-    // let lastPoint = 0;
-
-    // $(window).on('scroll', function(){
-    //     scrollPoint = window.scrollY;
-    //     if(scrollPoint > lastPoint){
-    //         fixedElm.addClass('js-headerHidden');
-    //     }else{
-    //         fixedElm.removeClass('js-headerHidden');
-    //     }
-    //     lastPoint = scrollPoint;
-    // });
-
     $(window).on('scroll',function (){
 
         //スライドアップ
@@ -221,6 +187,12 @@ $(function() {
     });
 });
 
+$(function() {
+    $('.c-header__btnBox').on('click',function(){
+        $('.l-header__titleLink').toggleClass('js-textHidden');
+    });
+});
+
 //
 $(window).on('scroll', function () {
     if (800 < $(this).scrollTop() && $(window).width() < 769) {
@@ -230,16 +202,15 @@ $(window).on('scroll', function () {
     }
 });
 
-//スクロールで画像動かす
-// $(window).on('scroll', function(){
-//     var scrollTop = $(window).scrollTop();
-//     var bgPosition = scrollTop / 2;
-    
-//     if(bgPosition){
-//         $('.p-location__parallaxInner').css('background-position', 'center top -'+ bgPosition + 'px');
-//     }
-// });
+$(document).ready(function() {
+    $('.l-header__title').click(function() {
+        $(location).prop("href", location.href);
+    })
+});
 
-// $(function(){
-//     $('.l-header__title h1').midnight();
-// });
+$(function() {
+    $(window).scroll(function() {
+        var scroll = $(this).scrollTop();
+        console.log(scroll);
+        });
+});
