@@ -7,6 +7,7 @@ $(window).on('load',function(){
 
 
 //スクロール時ページの背景色によってヘッダーの文字色変更
+//紺
 $(window).on('scroll', function () {
     if (760 < $(this).scrollTop()) {
         $('.l-header__titleLink').addClass('js-textColor');
@@ -20,6 +21,14 @@ $(window).on('scroll', function () {
         $('.l-header__navLink').addClass('js-textColor');
     } else {
         $('.l-header__navLink').removeClass('js-textColor');
+    }
+});
+
+$(window).on('scroll', function () {
+    if (760 < $(this).scrollTop()) {
+        $('.c-header__btnBox').addClass('js-textColor');
+    } else {
+        $('.c-header__btnBox').removeClass('js-textColor');
     }
 });
 
