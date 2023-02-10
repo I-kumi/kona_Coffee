@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <title>KonaCoffee Roasters</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/app.css" rel="stylesheet">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <script type='text/javascript' src="JavaScriput/index.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type='text/javascript' src="JavaScriput/index.js"></script>
 </head>
 <body id="top">
-  <div class="fixed-text">
+  <div>
     <!--ヘッダーここから-->
     <header class="l-header">
       <div class="l-header__inner">
         <div class="l-header__wrapper">
           <div id="header" class="l-header__container DownMove">
-            <div class="l-header__title">
+            <div  id="fixed-text" class="l-header__title">
               <h1>
                 <a class="l-header__titleLink" href="#top">Kona<br class="l-header__titleSp"> Coffee Roasters</a>
               </h1>
@@ -96,8 +94,8 @@
     <!--メインここから-->
     <div class="js-scroll__wrapper">
       <div class="js-scroll">
-        <main class="l-main"  id="luxy">
-          <section class="p-hero luxy-el" id="hero">
+        <main class="l-main">
+          <section class="p-hero" id="hero">
             <div class="p-hero__inner">
               <div class="p-hero__wrapper">
                 <div class="p-hero__container p-hero__container--main">
@@ -146,7 +144,7 @@
               </div>
             </div>
           </section>
-          <section class="p-about luxy-el" id="about">
+          <section class="p-about" id="about">
             <div class="p-about__inner">
               <div class="p-about__container">
                 <div class="p-about__text">
@@ -186,7 +184,7 @@
               </div>
             </div>
           </section>
-          <section class="p-menu luxy-el" id="menu">
+          <section class="p-menu" id="menu">
             <div class="p-menu__inner">
               <div class="p-menu__title">
                 <h3 class="p-menu__titleBold _scrollSlideInLeft">Menu</h3>
@@ -289,7 +287,7 @@
               </div>
             </div>
           </section>
-          <section class="p-shop luxy-el" id="shop">
+          <section class="p-shop" id="shop">
             <div class="p-shop__inner">
               <h2 class="_scrollSlideInLeft">Shop</h2>
               <div class="p-shop__container">
@@ -322,7 +320,7 @@
               </div>
             </div>
           </section>
-          <section class="p-location luxy-el" id="location">
+          <section class="p-location" id="location">
             <div class="p-location__inner">
               <div class="p-location__img">
                 <div class="p-location__parallax _scrollSlideUp">
@@ -386,8 +384,8 @@
     </div>
     <!--メインここまで-->
     <!--フッターここから-->
-    <footer class="l-footer" id="luxy">
-      <div class="l-footer__inner luxy-el">
+    <footer class="l-footer">
+      <div class="l-footer__inner">
         <div class="l-footer__male">
           <p>Contact : </p>
           <p>Mail. <a class="l-footer__maleLink">info@conacoffee.jp</a></p>

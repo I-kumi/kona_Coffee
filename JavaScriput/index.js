@@ -5,8 +5,59 @@ $(window).on('load',function(){
 	},1500);
 });
 
-
 //スクロール時ページの背景色によってヘッダーの文字色変更
+// //黄色
+$(window).on('scroll', function () {
+    if (650 < $(this).scrollTop()) {
+        $('.l-header__titleLink').addClass('js-textColorYellow');
+    } else {
+        $('.l-header__titleLink').removeClass('js-textColorYellow');
+    }
+});
+
+$(window).on('scroll', function () {
+    if (650 < $(this).scrollTop()) {
+        $('.l-header__navLink').addClass('js-textColorYellow');
+    } else {
+        $('.l-header__navLink').removeClass('js-textColorYellow');
+    }
+});
+
+//MENUテキストの文字色変更
+$(window).on('scroll', function () {
+    if (650 < $(this).scrollTop()) {
+        $('.c-header__btnBox').addClass('js-textColorYellow');
+    } else {
+        $('.c-header__btnBox').removeClass('js-textColorYellow');
+    }
+});
+
+//水色
+$(window).on('scroll', function () {
+    if (700 < $(this).scrollTop()) {
+        $('.l-header__titleLink').addClass('js-textColorGreen');
+    } else {
+        $('.l-header__titleLink').removeClass('js-textColorGreen');
+    }
+});
+
+$(window).on('scroll', function () {
+    if (700 < $(this).scrollTop()) {
+        $('.l-header__navLink').addClass('js-textColorGreen');
+    } else {
+        $('.l-header__navLink').removeClass('js-textColorGreen');
+    }
+});
+
+//MENUテキストの文字色変更
+$(window).on('scroll', function () {
+    if (700 < $(this).scrollTop()) {
+        $('.c-header__btnBox').addClass('js-textColorGreen');
+    } else {
+        $('.c-header__btnBox').removeClass('js-textColorGreen');
+    }
+});
+
 //紺
 $(window).on('scroll', function () {
     if (760 < $(this).scrollTop()) {
@@ -24,6 +75,7 @@ $(window).on('scroll', function () {
     }
 });
 
+//MENUテキストの文字色変更
 $(window).on('scroll', function () {
     if (760 < $(this).scrollTop()) {
         $('.c-header__btnBox').addClass('js-textColor');
@@ -34,7 +86,8 @@ $(window).on('scroll', function () {
 
 //スクロール時ページの背景色によって画像の色を変更
 $(window).on('scroll', function () {
-    if (700 < $(this).scrollTop()) {
+    var scroll = $('.p-about').offset().top;
+    if (scroll < $(this).scrollTop()) {
         $('.l-header__logoDeepBlue').addClass('js-logoImg');
     } else {
         $('.l-header__logoDeepBlue').removeClass('js-logoImg');
@@ -211,7 +264,7 @@ $(document).ready(function() {
 
 $(function() {
     $(window).scroll(function() {
-        var scroll = $(this).scrollTop();
+        var scroll = $('.p-about').scrollTop();
         console.log(scroll);
-        });
+    });
 });

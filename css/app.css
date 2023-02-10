@@ -1066,16 +1066,16 @@ a:hover {
   background-color: #EBE9E1;
 }
 
-.js-textColor {
-  color: #242E43;
+.js-textColorYellow {
+  color: #bffa87;
 }
 
 .js-textColorGreen {
-  color: #00f472;
+  color: #12a49a;
 }
 
-.js-textColorYellow {
-  color: #fffb00;
+.js-textColor {
+  color: #242E43;
 }
 
 /*// ==========================================================================
